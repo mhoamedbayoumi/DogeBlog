@@ -46,7 +46,7 @@ export default function Dashboard() {
       posts.length>0?posts.map(item => {
                 console.log("from home:"+item.name);
                 return (
-                    <div className=" self-center w-10/12 h-100 border-slate-300 shadow-lg rounded-lg p-4 border-b-2 mx-10">
+                    <div key={item.id} className=" self-center w-10/12 h-100 border-slate-300 shadow-lg rounded-lg p-4 border-b-2 mx-10">
                             <h1 className="text-mudiem text-gray-700 font-medium">{item.name}</h1>
                             <h5 className="text-small text-gray-600">{item.post}</h5>
                             <button type="button" onClick={()=>deletePost(item.id)} className="text-white bg-pink-500 py-2 px-4 rounded hover:bg-pink-700 font-bold">
